@@ -43,4 +43,7 @@ string arrayToString(const SuperArray& s){
     return s1;
 }
 
-
+/*! Overload the [] */
+int &operator[](const int index){
+	//do stuff
+}
