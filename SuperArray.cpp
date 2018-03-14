@@ -40,6 +40,7 @@ string arrayToString(const SuperArray& s){
         ss << s.arr[i] << " " ;
     }
     string s1 = ss.str(); // Build a string from char stream
+    return s1;
 }
 
 
