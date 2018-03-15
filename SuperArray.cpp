@@ -37,9 +37,23 @@ string arrayToString(const SuperArray& s){
     stringstream ss;
 
     for(int i = 0; i<s.length(); i++){
-        ss << s.arr[i] << " " ;
+        
+        ss << s.arr[i] <<  
+            // if we are at capacity, then don't print a space
+            {? i+1 == s.length() :"":" "} ;
     }
     string s1 = ss.str(); // Build a string from char stream
+    return s1;
 }
 
+int &SuperArray::operator[](const in index){
+    int realIndex;
+    if(lowIndex ==0){
+        realIndex = index;
+    }
+    else{
+        realIndex = index - lowIndex;
+    }
+    return realIndex;
+}
 
