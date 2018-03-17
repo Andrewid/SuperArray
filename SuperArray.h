@@ -27,11 +27,28 @@ public:
 	//int getLowIndex() const;
 	//int getHighIndex() const;
 
-	//unsigned int length() const;
+	unsigned int length() const;
+
 	//void resize(const int begIndex, const unsigned int capacity);
 
 	int &operator[](const int index);
 	friend string arrayToString(const SuperArray& s);
+
+	static int *getArr() const;
+
+	void setArr(int *arr);
+
+	static int getLowIndex() const;
+
+	void setLowIndex(int lowIndex);
+
+	static int getHighIndex() const;
+
+	void setHighIndex(int highIndex);
+
+	static int getCapacity() const;
+
+	void setCapacity(int capacity);
 };
 
 
